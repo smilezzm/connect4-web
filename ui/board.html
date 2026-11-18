@@ -1,0 +1,35 @@
+<main class="arena">
+  <section class="intro" aria-labelledby="title">
+    <h1 id="title">Connect Four</h1>
+    <p>Connect four discs horizontally, vertically, or diagonally before the AI does.</p>
+  </section>
+
+  <div class="play-area">
+    <section class="board" aria-label="Connect Four board">
+      <div class="columns"></div>
+    </section>
+
+    <aside class="panel" aria-label="Game controls">
+      <div class="status" role="status" aria-live="polite">
+        <span class="status-disc" aria-hidden="true"></span>
+        <div><h2></h2><p class="hint"></p></div>
+      </div>
+
+      <div class="players">
+        <div class="player"><span class="disc human" aria-hidden="true"></span><span>You</span></div>
+        <div class="player"><span class="disc bot" aria-hidden="true"></span><span>AI bot</span></div>
+      </div>
+
+      <fieldset>
+        <legend>First move in a new game</legend>
+        <div class="choices">
+          <label><input name="first" type="radio" value="1" checked><span>You</span></label>
+          <label><input name="first" type="radio" value="-1"><span>AI bot</span></label>
+        </div>
+      </fieldset>
+      <button type="button" class="restart">New game</button>
+      <p class="error" role="alert" hidden></p>
+    </aside>
+  </div>
+  <footer><span>Drop a disc by selecting a column.</span><span class="moves"></span></footer>
+</main>
